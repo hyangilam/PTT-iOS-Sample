@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  PTT_Sample
+//  PTT-Sample
 //
-//  Created by spring on 10/29/25.
+//  Created by spring on 10/30/25.
 //
 
 import SwiftUI
@@ -24,15 +24,10 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
             .toolbar {
-#if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
-#endif
                 ToolbarItem {
                     Button(action: addItem) {
                         Label("Add Item", systemImage: "plus")
